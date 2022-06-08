@@ -42,6 +42,10 @@ body, html {
 }
 .toggle__button {
   display: flex;
+  cursor: pointer;
+}
+.toggle__button:hover {
+  opacity: 0.5;
 }
 .toggle__button input[type=checkbox] {
   height: 0;
@@ -170,10 +174,21 @@ body, html {
   line-height: 1.6rem;
   letter-spacing: 0.139rem;
   text-transform: uppercase;
+  cursor: pointer;
+}
+.card__btn:hover {
+  background: transparent;
+  border: 1px solid hsl(237deg, 63%, 64%);
+  color: hsl(237deg, 63%, 64%);
 }
 .selected .card__btn {
   background: hsl(0deg, 0%, 100%);
   color: hsl(237deg, 63%, 64%);
+}
+.selected .card__btn:hover {
+  background: transparent;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
 }
 
 @media screen and (max-width: 1280px) {

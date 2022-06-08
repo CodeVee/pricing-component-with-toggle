@@ -58,6 +58,8 @@ body, html {
     display: flex;
     justify-content: space-between;
 
+    
+
     &__option {
         color: $grayish-blue;
         font-size: 1.5rem;
@@ -68,6 +70,11 @@ body, html {
 
     &__button {
         display: flex;
+        cursor: pointer;
+
+        &:hover {
+            opacity: .5;
+        }
 
         input[type="checkbox"] {
           height: 0;
@@ -215,10 +222,23 @@ body, html {
         line-height: 1.6rem;
         letter-spacing: .139rem;
         text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+            background: transparent;
+            border: 1px solid $deep-purple;
+            color: $deep-purple;
+        }
 
         .selected & {
             background: $white;
             color: $deep-purple;
+
+            &:hover {
+                background: transparent;
+                border: 1px solid $white;
+                color: $white;
+            }
         }
     }
 }
