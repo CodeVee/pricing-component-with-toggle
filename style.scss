@@ -275,6 +275,52 @@ body, html {
     body, html {
         font-size: $fs-11s;
     } 
+
+    .page {
+        padding: {
+            top: 6.4rem;
+            bottom: 7.1rem;
+        };
+    }
+    
+    .img {
+        &--1 {
+            right: -19.5rem;
+            top: -3rem;
+        }
+    
+        &--2 {
+            display: none;
+        }
+    }
+    
+    .toggle {
+        margin-bottom: 8rem;      
+    }
+    
+    .grid {
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+    
+    .card {
+        width: 32.7rem;
+        padding: 3.1rem 2.9rem;
+    
+        &:first-child {
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        &:last-child {
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+    
+        &.selected {
+            height: 45.4rem;
+            padding: 3.1rem 2.9rem;
+        }
+    }    
 }
 
 @media screen and (max-width: $mobile) {
