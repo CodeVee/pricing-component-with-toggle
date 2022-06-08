@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/CodeVee/pricing-component-with-toggle)
-- Live Site URL: [Add live site URL here](https://incomparable-pony-19d773.netlify.app/)
+- Solution URL: [GitHub](https://github.com/CodeVee/pricing-component-with-toggle)
+- Live Site URL: [Netlify](https://incomparable-pony-19d773.netlify.app/)
 
 ## Built with
 
