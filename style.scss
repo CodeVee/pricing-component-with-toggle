@@ -54,12 +54,58 @@ body, html {
 
 .toggle {
     margin-bottom: 6.4rem;
+    width: 23.9rem;
+    display: flex;
+    justify-content: space-between;
+
     &__option {
         color: $grayish-blue;
         font-size: 1.5rem;
         line-height: 2.8rem;
         opacity: .5;
+        align-self: center;
     }
+
+    &__button {
+        display: flex;
+
+        input[type="checkbox"] {
+          height: 0;
+          width: 0;
+          visibility: hidden;
+        }
+    
+        label {
+          cursor: pointer;
+          width: 5.6rem;
+          height: 3.2rem;
+          display: block;
+          border-radius: 1.6rem;
+          position: relative;
+          background: $linear-gradient;
+        }
+    
+        label:after {
+          content: "";
+          position: absolute;
+          top: .4rem;
+          right: .4rem;
+          width: 2.4rem;
+          height: 2.4rem;
+          background: $white;
+          border-radius: 50%;
+          transition: .3s;
+        }
+    
+        input:checked + label:after {
+          right: calc(100% - .4rem);
+          transform: translateX(100%);
+        }
+    
+        label:active:after {
+          width: 3rem;
+        }
+      }
 }
 
 .grid {
@@ -75,6 +121,15 @@ body, html {
     border-radius: 1rem;
     padding: 3.1rem;
     text-align: center;
+
+    &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 
     &.selected {
         height: 50.1rem;

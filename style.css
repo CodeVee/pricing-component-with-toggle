@@ -29,12 +29,51 @@ body, html {
 
 .toggle {
   margin-bottom: 6.4rem;
+  width: 23.9rem;
+  display: flex;
+  justify-content: space-between;
 }
 .toggle__option {
   color: hsl(233deg, 13%, 49%);
   font-size: 1.5rem;
   line-height: 2.8rem;
   opacity: 0.5;
+  align-self: center;
+}
+.toggle__button {
+  display: flex;
+}
+.toggle__button input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.toggle__button label {
+  cursor: pointer;
+  width: 5.6rem;
+  height: 3.2rem;
+  display: block;
+  border-radius: 1.6rem;
+  position: relative;
+  background: linear-gradient(135deg, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+}
+.toggle__button label:after {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.toggle__button input:checked + label:after {
+  right: calc(100% - 0.4rem);
+  transform: translateX(100%);
+}
+.toggle__button label:active:after {
+  width: 3rem;
 }
 
 .grid {
@@ -50,6 +89,14 @@ body, html {
   border-radius: 1rem;
   padding: 3.1rem;
   text-align: center;
+}
+.card:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.card:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .card.selected {
   height: 50.1rem;
