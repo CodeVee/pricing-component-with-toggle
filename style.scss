@@ -1,0 +1,53 @@
+$white: hsl(0, 0%, 100%);
+$linear-gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+$very-light-grayish-blue: hsl(240, 78%, 98%);
+$light-grayish-blue: hsl(234, 14%, 74%);
+$grayish-blue: hsl(233, 13%, 49%);
+$dark-grayish-blue: hsl(232, 13%, 33%);
+
+
+$font-montserrat: 'Montserrat', sans-serif;
+$fw-700: 700;
+$fs-8s: 8.89px;
+$fs-10: 10px;
+$fs-11s: 11.04px;
+
+$mobile: 400px;
+$mobile-wide: 430px;
+$desktop: 1280px;
+$max-width: 1440px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: $fs-10;
+    font-family: $font-montserrat;
+    font-weight: $fw-700;
+}
+
+.page {
+    height: 100vh;
+}
+
+@media screen and (max-width: $desktop) {
+    body, html {
+        font-size: $fs-8s;
+    }
+}
+
+@media screen and (max-width: $mobile-wide) {
+    body, html {
+        font-size: $fs-11s;
+    } 
+}
+
+@media screen and (max-width: $mobile) {
+    body, html {
+        font-size: $fs-10;
+    }
+}
