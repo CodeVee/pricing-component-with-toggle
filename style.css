@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.page {
+  min-height: 100vh;
+  background: hsl(240deg, 78%, 98%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-x: clip;
+  padding-top: 7.1rem;
+  padding-bottom: 10.3rem;
+}
+
+.img {
+  position: absolute;
+}
+.img--1 {
+  width: 37.5rem;
+  height: 65.8rem;
+  right: 0;
+  top: 0;
+}
+.img--2 {
+  width: 35.3rem;
+  height: 30.4rem;
+  left: 0;
+  bottom: 0;
+}
+
+.header {
+  font-size: 32px;
+  line-height: 39px;
+  color: hsl(233deg, 13%, 49%);
+  margin-bottom: 4rem;
+}
+
+.toggle {
+  margin-bottom: 6.4rem;
+  width: 23.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+.toggle__option {
+  color: hsl(233deg, 13%, 49%);
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  opacity: 0.5;
+  align-self: center;
+}
+.toggle__button {
+  display: flex;
+  cursor: pointer;
+}
+.toggle__button:hover {
+  opacity: 0.5;
+}
+.toggle__button input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.toggle__button label {
+  cursor: pointer;
+  width: 5.6rem;
+  height: 3.2rem;
+  display: block;
+  border-radius: 1.6rem;
+  position: relative;
+  background: linear-gradient(135deg, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+}
+.toggle__button label:after {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.toggle__button input:checked + label:after {
+  right: calc(100% - 0.4rem);
+  transform: translateX(100%);
+}
+.toggle__button label:active:after {
+  width: 3rem;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.card {
+  width: 35rem;
+  height: 45.3rem;
+  background: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 2rem 4rem hsla(244deg, 61%, 89%, 0.5);
+  border-radius: 1rem;
+  padding: 3.1rem;
+  text-align: center;
+}
+.card:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.card:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.card.selected {
+  height: 50.1rem;
+  background: linear-gradient(135deg, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+  padding: 5.5rem 3.1rem;
+}
+.card__header {
+  color: hsl(233deg, 13%, 49%);
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  margin-bottom: 2.4rem;
+}
+.selected .card__header {
+  color: hsl(0deg, 0%, 100%);
+}
+.card__price {
+  margin-bottom: 3.2rem;
+  color: hsl(232deg, 13%, 33%);
+  font-size: 7.2rem;
+  line-height: 7.1rem;
+  letter-spacing: -0.216rem;
+  display: flex;
+  justify-content: center;
+}
+.selected .card__price {
+  color: hsl(0deg, 0%, 100%);
+}
+.card__price span {
+  font-size: 4rem;
+  line-height: 4.9rem;
+  letter-spacing: -0.12rem;
+  align-self: center;
+  margin-right: 0.8rem;
+}
+.card__price.hide {
+  display: none;
+}
+.card .card__options {
+  height: 16rem;
+  margin-bottom: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card__divider {
+  height: 1px;
+  background: hsl(233deg, 13%, 49%);
+  opacity: 0.25;
+}
+.selected .card__divider {
+  background: hsl(0deg, 0%, 100%);
+}
+.card__option {
+  color: hsl(233deg, 13%, 49%);
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+}
+.selected .card__option {
+  color: hsl(0deg, 0%, 100%);
+}
+.card__btn {
+  width: 100%;
+  height: 4.4rem;
+  background: linear-gradient(135deg, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+  border-radius: 0.6rem;
+  border: none;
+  outline: none;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.139rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.card__btn:hover {
+  background: transparent;
+  border: 1px solid hsl(237deg, 63%, 64%);
+  color: hsl(237deg, 63%, 64%);
+}
+.selected .card__btn {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(237deg, 63%, 64%);
+}
+.selected .card__btn:hover {
+  background: transparent;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+@media screen and (max-width: 1280px) {
+  body, html {
+    font-size: 8.89px;
+  }
+}
+@media screen and (max-width: 430px) {
+  body, html {
+    font-size: 11.04px;
+  }
+
+  .page {
+    padding-top: 6.4rem;
+    padding-bottom: 7.1rem;
+  }
+
+  .img--1 {
+    right: -19.5rem;
+    top: -3rem;
+  }
+  .img--2 {
+    display: none;
+  }
+
+  .toggle {
+    margin-bottom: 8rem;
+  }
+
+  .grid {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .card {
+    width: 32.7rem;
+    padding: 3.1rem 2.9rem;
+  }
+  .card:first-child {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  .card:last-child {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+  .card.selected {
+    height: 45.4rem;
+    padding: 3.1rem 2.9rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  body, html {
+    font-size: 10px;
+  }
+}
