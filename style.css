@@ -11,7 +11,122 @@ body, html {
 }
 
 .page {
-  height: 100vh;
+  min-height: 100vh;
+  background: hsl(240deg, 78%, 98%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7.1rem;
+  padding-bottom: 10.3rem;
+}
+
+.header {
+  font-size: 32px;
+  line-height: 39px;
+  color: hsl(233deg, 13%, 49%);
+  margin-bottom: 4rem;
+}
+
+.toggle {
+  margin-bottom: 6.4rem;
+}
+.toggle__option {
+  color: hsl(233deg, 13%, 49%);
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  opacity: 0.5;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  width: 35rem;
+  height: 45.3rem;
+  background: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 2rem 4rem hsla(244deg, 61%, 89%, 0.5);
+  border-radius: 1rem;
+  padding: 3.1rem;
+  text-align: center;
+}
+.card.selected {
+  height: 50.1rem;
+  background: linear-gradient(135deg, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+  padding: 5.5rem 3.1rem;
+}
+.card__header {
+  color: hsl(233deg, 13%, 49%);
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  margin-bottom: 2.4rem;
+}
+.selected .card__header {
+  color: hsl(0deg, 0%, 100%);
+}
+.card__price {
+  margin-bottom: 3.2rem;
+  color: hsl(232deg, 13%, 33%);
+  font-size: 7.2rem;
+  line-height: 7.1rem;
+  letter-spacing: -0.216rem;
+  display: flex;
+  justify-content: center;
+}
+.selected .card__price {
+  color: hsl(0deg, 0%, 100%);
+}
+.card__price span {
+  font-size: 4rem;
+  line-height: 4.9rem;
+  letter-spacing: -0.12rem;
+  align-self: center;
+  margin-right: 0.8rem;
+}
+.card__price--annually {
+  display: none;
+}
+.card .card__options {
+  height: 16rem;
+  margin-bottom: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card__divider {
+  height: 1px;
+  background: hsl(233deg, 13%, 49%);
+  opacity: 0.25;
+}
+.selected .card__divider {
+  background: hsl(0deg, 0%, 100%);
+}
+.card__option {
+  color: hsl(233deg, 13%, 49%);
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+}
+.selected .card__option {
+  color: hsl(0deg, 0%, 100%);
+}
+.card__btn {
+  width: 100%;
+  height: 4.4rem;
+  background: linear-gradient(135deg, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+  border-radius: 0.6rem;
+  border: none;
+  outline: none;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.139rem;
+  text-transform: uppercase;
+}
+.selected .card__btn {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(237deg, 63%, 64%);
 }
 
 @media screen and (max-width: 1280px) {
